@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "You're either not Ahmad or you aren't",
+  "description": "You're either not Ahmad or you aren't",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://chat.stackoverflow.com/rooms/15/android"],
+      "js": [
+        "external/jquery.js",
+        "main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "http://chat.stackoverflow.com/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
